@@ -1,0 +1,5 @@
+@mixin base-title($fs: 14px, $fw: 700, $fh: 1.2) {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
