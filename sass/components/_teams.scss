@@ -1,0 +1,89 @@
+/* = Команда = */
+
+.teams {
+  background-color: $teams-bg;
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+      0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__names,
+  &__specialization {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary;
+  }
+
+  &__names {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: $titles;
+  }
+}
+
+.teams__list .teams__item + .teams__item {
+  margin-left: 30px;
+}
+
+.titles {
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $titles;
+}
+
+.notes {
+  background-color: $first-bg;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.social {
+  &__list {
+    display: flex;
+    margin-top: 16px;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 206px;
+    min-height: 44px;
+  }
+  &__link {
+    width: 44px;
+    height: 44px;
+    background-color: $first-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: $icon-color;
+    transition: color $animation, background-color $animation;
+  }
+
+  &__icon {
+    fill: currentColor;
+    transition: fill $animation;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent;
+    color: $first-bg;
+  }
+}
+
+.social__item + .social__item {
+  margin-left: 10px;
+}

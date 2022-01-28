@@ -1,0 +1,33 @@
+/* = лого = */
+.logo {
+  align-self: center;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $accent;
+
+  &__white {
+    color: #fff;
+  }
+
+  &__anime {
+    transform: rotateY(360deg);
+    animation: rotateY 5000ms infinite alternate backwards ease-in-out
+      100ms;
+  }
+}
+
+@keyframes rotateY {
+  0% {
+    transform: perspective(500px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(500px) rotateY(360deg);
+  }
+}

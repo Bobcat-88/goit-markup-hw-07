@@ -1,0 +1,40 @@
+/* = клієнти = */
+
+.clients {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+    background-color: #fff;
+    color: $icon-color;
+    transition: color $animation, background-color $animation;
+  }
+
+  &__icon {
+    fill: currentColor;
+    transition: fill $animation;
+  }
+}
+
+.clients__link:hover,
+.clients__link:focus {
+  border-color: $accent;
+  color: $accent;
+}
+
+.clients__item + .clients__item {
+  margin-left: 30px;
+}

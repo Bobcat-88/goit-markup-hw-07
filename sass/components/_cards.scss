@@ -1,0 +1,79 @@
+/* = картки = */
+
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.cards-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  overflow: hidden;
+
+  &:hover .description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    padding: 63px 24px;
+    background-color: $cards-bg;
+    color: #fff;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.55;
+
+    transform: translateY(0);
+    transition: transform $animation, opacity $animation;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(n + 7) {
+    margin-bottom: 30px;
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card-description {
+  position: relative;
+  overflow: hidden;
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+  padding: 63px 24px;
+
+  background-color: $cards-bg;
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  opacity: 0.9;
+
+  transform: translateY(100%);
+  transition: transform $animation, opacity $animation;
+}
+
+.cards-text {
+  padding: 24px 20px;
+
+  box-sizing: border-box;
+  border: 1px solid #eeeeee;
+
+  background: #fff;
+}

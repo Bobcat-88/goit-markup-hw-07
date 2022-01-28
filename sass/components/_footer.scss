@@ -1,0 +1,172 @@
+/* = футер = */
+
+.footer {
+  display: flex;
+  align-items: center;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background: $secondary-bg;
+  &__container {
+    display: flex;
+    float: left;
+  }
+
+  &__adsres {
+    display: block;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* = футер адрес = */
+.addres {
+  &__post {
+    margin-top: 20px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: #fff;
+  }
+
+  &__item {
+    margin-top: 9px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color $animation;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent;
+  }
+}
+
+/* = футер підписка = */
+.footer__social {
+  display: block;
+  width: 206px;
+  height: 80px;
+  margin-top: 12px;
+  margin-left: 70px;
+  padding: 0;
+}
+
+.footer__title {
+  @include base-title();
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer__social__list {
+  margin-top: 20px;
+}
+
+.footer__social__link {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+
+  transition: background-color $animation;
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    color: #fff;
+  }
+}
+
+.footer__social__item {
+  & + .footer__social__item {
+    margin-left: 10px;
+  }
+}
+
+.footer__social__icon {
+  fill: currentColor;
+}
+
+.footer__subscrabe {
+  margin-top: 12px;
+  margin-left: 93px;
+}
+
+/* = футер форма = */
+
+.footer__form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    margin-right: 12px;
+    color: #fff;
+    border: 1px solid $primary;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: background-color $animation;
+
+    font-size: 16px;
+    padding-left: 16px;
+  }
+
+  /* чи буде це помилка ???*/
+  &__icon {
+    margin-left: 10px;
+    align-items: center;
+  }
+
+  & .form__label {
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+  }
+}
+
+.footer__form__input:hover,
+.footer__form__input:focus {
+  background-color: rgba(117, 117, 117, 0.2);
+  transition: background-color $animation;
+}
+
+.footer__form__button {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  padding-left: 29px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: $accent;
+  transition: background-color $animation;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    transition: background-color $animation;
+  }
+}
